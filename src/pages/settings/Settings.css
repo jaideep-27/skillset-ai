@@ -1,0 +1,169 @@
+.settings {
+  min-height: 100vh;
+  background: #f8f9ff;
+  padding: 2rem;
+}
+
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.settings h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.settings-section {
+  margin-bottom: 3rem;
+}
+
+.settings-section h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.form-group input:disabled {
+  background: #f8f9ff;
+  cursor: not-allowed;
+}
+
+.preference-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.preference-item:last-child {
+  border-bottom: none;
+}
+
+.preference-info h3 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.preference-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4C3AFF;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.theme-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background: white;
+  cursor: pointer;
+}
+
+.save-button {
+  width: 100%;
+  padding: 0.875rem;
+  background: #4C3AFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-button:hover {
+  background: #3C2AFF;
+}
+
+@media (max-width: 768px) {
+  .settings {
+    padding: 1rem;
+  }
+
+  .settings-container {
+    padding: 1.5rem;
+  }
+
+  .settings h1 {
+    font-size: 1.75rem;
+  }
+
+  .settings-section h2 {
+    font-size: 1.25rem;
+  }
+}

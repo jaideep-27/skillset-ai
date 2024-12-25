@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360" height="200" viewBox="0 0 360 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="200" fill="#1E293B"/>
+  <rect x="40" y="60" width="280" height="80" rx="4" fill="#334155"/>
+  <text x="60" y="110" fill="#94A3B8" font-family="monospace" font-size="16">&lt;code&gt;</text>
+  <text x="140" y="110" fill="#38BDF8" font-family="monospace" font-size="16">Hello World!</text>
+  <text x="250" y="110" fill="#94A3B8" font-family="monospace" font-size="16">&lt;/code&gt;</text>
+</svg>

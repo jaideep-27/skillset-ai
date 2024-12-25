@@ -1,0 +1,294 @@
+.instructor-dashboard {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.create-session-btn {
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-session-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(77, 97, 252, 0.25);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: rgba(13, 25, 48, 0.5);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00D4FF;
+}
+
+.upcoming-sessions,
+.enrolled-students {
+  margin-bottom: 3rem;
+}
+
+.upcoming-sessions h2,
+.enrolled-students h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.sessions-grid,
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.session-card,
+.student-card {
+  background: rgba(13, 25, 48, 0.5);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.session-card:hover,
+.student-card:hover {
+  transform: translateY(-3px);
+  border-color: #00D4FF;
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+}
+
+.session-card h3,
+.student-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.session-card p,
+.student-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.session-details,
+.enrollment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.session-details span,
+.enrollment-details span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.view-session-btn {
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.view-session-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 97, 252, 0.25);
+}
+
+/* Create Session Page */
+.create-session-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--bg-darker);
+}
+
+.create-session-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(13, 25, 48, 0.5);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.create-session-container h1 {
+  font-size: 2rem;
+  color: #00D4FF;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  background: rgba(13, 25, 48, 0.3);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00D4FF;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  color: var(--text-secondary);
+}
+
+.cancel-btn:hover {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  color: white;
+  border: none;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(77, 97, 252, 0.25);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .instructor-dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .sessions-grid,
+  .students-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-session-container {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}

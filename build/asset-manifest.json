@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/skillset-ai/static/css/main.4db6ddf0.css",
+    "main.js": "/skillset-ai/static/js/main.52a49961.js",
+    "static/media/study.png": "/skillset-ai/static/media/study.aa354dfe570ca82a59f9.png",
+    "static/media/google.svg": "/skillset-ai/static/media/google.71eea6f36afe236791169dfff1c131ca.svg",
+    "index.html": "/skillset-ai/index.html",
+    "static/media/web-dev.svg": "/skillset-ai/static/media/web-dev.7fd932ee37ef617bd82dd6c0ad4993a8.svg",
+    "static/media/uiux-design.svg": "/skillset-ai/static/media/uiux-design.e879cc4342487e21c8f5e7e44fe0e011.svg",
+    "static/media/digital-marketing.svg": "/skillset-ai/static/media/digital-marketing.3732a16e592cd83115e2f61ad77b371b.svg",
+    "static/media/community.svg": "/skillset-ai/static/media/community.1a62536ad089a1e100f9bf58f796e505.svg",
+    "static/media/data-science.svg": "/skillset-ai/static/media/data-science.bc469c323e6ab0c9560461c6ea168a5e.svg",
+    "static/media/mobile-dev.svg": "/skillset-ai/static/media/mobile-dev.e822968ab2d2b2ea655c5de103dab8ae.svg",
+    "static/media/intro-programming.svg": "/skillset-ai/static/media/intro-programming.02088fa1b235f40b8544a4d3b738a3b9.svg",
+    "static/media/quizzes.svg": "/skillset-ai/static/media/quizzes.4a7710aeb62460aa57a0383d8d36ea15.svg",
+    "static/media/games.svg": "/skillset-ai/static/media/games.2143d103831a80ac0efcfcd3213a0511.svg",
+    "static/media/courses.svg": "/skillset-ai/static/media/courses.5a9e13e50579da7222d97e62cb7089a5.svg",
+    "static/media/grid.svg": "/skillset-ai/static/media/grid.091e92064d70f058d0e4.svg",
+    "main.4db6ddf0.css.map": "/skillset-ai/static/css/main.4db6ddf0.css.map",
+    "main.52a49961.js.map": "/skillset-ai/static/js/main.52a49961.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4db6ddf0.css",
+    "static/js/main.52a49961.js"
+  ]
+}

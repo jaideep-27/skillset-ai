@@ -1,0 +1,231 @@
+.student-dashboard {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--bg-darker);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.browse-courses-btn {
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.browse-courses-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(77, 97, 252, 0.25);
+}
+
+.learning-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: rgba(13, 25, 48, 0.5);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00D4FF;
+}
+
+.enrolled-courses,
+.upcoming-sessions,
+.ai-chat {
+  margin-bottom: 3rem;
+}
+
+.enrolled-courses h2,
+.upcoming-sessions h2,
+.ai-chat h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.courses-grid,
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card,
+.session-card {
+  background: rgba(13, 25, 48, 0.5);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-card:hover,
+.session-card:hover {
+  transform: translateY(-3px);
+  border-color: #00D4FF;
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+}
+
+.course-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(0, 212, 255, 0.1);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00D4FF, #4D61FC);
+  transition: width 0.3s ease;
+}
+
+.course-card h3,
+.session-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin: 1rem 0 0.75rem;
+}
+
+.course-card p,
+.session-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.course-details,
+.session-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-details span,
+.session-details span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.continue-btn,
+.join-session-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continue-btn:hover,
+.join-session-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(77, 97, 252, 0.25);
+}
+
+.ai-chat-container {
+  background: rgba(13, 25, 48, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.ai-chat-container p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.start-chat-btn {
+  background: linear-gradient(135deg, #00D4FF 0%, #4D61FC 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-chat-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(77, 97, 252, 0.25);
+}
+
+@media (max-width: 768px) {
+  .student-dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .learning-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid,
+  .sessions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-chat-container {
+    padding: 1.5rem;
+  }
+}

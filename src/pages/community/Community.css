@@ -1,0 +1,152 @@
+.community {
+  min-height: 100vh;
+  background: var(--bg-darker);
+  padding: 2rem;
+  padding-top: 90px;
+}
+
+.community-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.community h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.community-sections {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.forums-section,
+.events-section {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.forums-section h2,
+.events-section h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.forum-topics {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background: rgba(30, 41, 59, 0.4);
+}
+
+.topic-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.topic-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.topic-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.topic-stats {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.events-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.event-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background: rgba(30, 41, 59, 0.4);
+}
+
+.event-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  padding: 0.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 8px;
+}
+
+.event-date .date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.event-details h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.event-details p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-time {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .community {
+    padding: 1rem;
+    padding-top: 90px;
+  }
+
+  .community h1 {
+    font-size: 2rem;
+  }
+
+  .community-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .forums-section,
+  .events-section {
+    padding: 1.5rem;
+  }
+}
