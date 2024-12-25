@@ -23,7 +23,7 @@ function App() {
   const [user] = useAuthState(auth);
 
   return (
-    <Router basename="/skillset-ai">
+    <Router>
       <div className="app">
         <Navbar user={user} />
         <div className="content">
