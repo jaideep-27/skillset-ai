@@ -77,12 +77,22 @@ function Login() {
     setIsSubmitting(true);
 
     try {
-      console.log('Starting Google sign in...');
+      console.log('Starting Google sign in...', { 
+        authDomain: auth.config.authDomain,
+        apiKey: auth.config.apiKey 
+      });
+      
       const result = await signInWithPopup(auth, googleProvider);
       console.log('Google sign in successful:', result.user.email);
       navigate('/');
     } catch (error) {
-      console.error('Google sign-in error:', error);
+      console.error('Google sign-in error:', {
+        code: error.code,
+        message: error.message,
+        customData: error.customData,
+        stack: error.stack
+      });
+      
       switch (error.code) {
         case 'auth/popup-closed-by-user':
           setError('Sign in cancelled. Please try again');
@@ -95,9 +105,13 @@ function Login() {
           break;
         case 'auth/unauthorized-domain':
           setError('This domain is not authorized for Google Sign-in. Please contact support.');
+          console.error('Unauthorized domain error. Please check Firebase Console authorized domains.');
+          break;
+        case 'auth/internal-error':
+          setError('An internal error occurred. Please check console for details.');
           break;
         default:
-          setError('An error occurred during Google sign-in. Please try again');
+          setError(`Google Sign-in Error: ${error.message}`);
           console.error('Detailed error:', error);
       }
     } finally {
