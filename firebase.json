@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "pocket-class-booking-system",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "book-my-tutor/public/index.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "skillset-ai",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://jaideep-27.github.io/skillset-ai",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-react": "^7.22.15",
+    "@firebase/analytics": "^0.10.10",
+    "@firebase/app": "^0.10.17",
+    "@firebase/auth": "^1.8.1",
+    "@firebase/firestore": "^4.7.5",
+    "@heroicons/react": "^2.0.18",
+    "@tensorflow/tfjs": "^4.17.0",
+    "chart.js": "^4.4.7",
+    "firebase": "^10.7.1",
+    "framer-motion": "^10.18.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.14.0",
+    "react-router-dom": "^6.22.0",
+    "react-scripts": "5.0.1",
+    "react-spring": "^9.7.3",
+    "recharts": "^2.15.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
+}

@@ -1,0 +1,40 @@
+[debug] [2024-11-07T13:47:35.619Z] ----------------------------------------------------------------------
+[debug] [2024-11-07T13:47:35.622Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nkris\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting --port=5002
+[debug] [2024-11-07T13:47:35.622Z] CLI Version:   13.24.1
+[debug] [2024-11-07T13:47:35.622Z] Platform:      win32
+[debug] [2024-11-07T13:47:35.622Z] Node Version:  v20.15.0
+[debug] [2024-11-07T13:47:35.622Z] Time:          Thu Nov 07 2024 19:17:35 GMT+0530 (India Standard Time)
+[debug] [2024-11-07T13:47:35.623Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-07T13:47:35.742Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-07T13:47:35.743Z] > authorizing via signed-in user (btechbabji08@gmail.com)
+[debug] [2024-11-07T13:47:35.743Z] [iam] checking project pocket-class-booking-system for permissions ["firebase.projects.get"]
+[debug] [2024-11-07T13:47:35.744Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:35.744Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:35.745Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pocket-class-booking-system:testIamPermissions [none]
+[debug] [2024-11-07T13:47:35.746Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/pocket-class-booking-system:testIamPermissions x-goog-quota-user=projects/pocket-class-booking-system
+[debug] [2024-11-07T13:47:35.746Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pocket-class-booking-system:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-07T13:47:37.395Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pocket-class-booking-system:testIamPermissions 200
+[debug] [2024-11-07T13:47:37.395Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pocket-class-booking-system:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-07T13:47:37.396Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:37.396Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:37.397Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system [none]
+[debug] [2024-11-07T13:47:37.934Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system 200
+[debug] [2024-11-07T13:47:37.934Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system {"projectId":"pocket-class-booking-system","projectNumber":"259986748132","displayName":"Pocket-Class-Booking-System","name":"projects/pocket-class-booking-system","resources":{"hostingSite":"pocket-class-booking-system"},"state":"ACTIVE","etag":"1_3f82058b-8e72-4205-a2df-9d212b4d36c7"}
+[debug] [2024-11-07T13:47:37.939Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:37.939Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:37.940Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/pocket-class-booking-system/sites 
+[debug] [2024-11-07T13:47:39.268Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/pocket-class-booking-system/sites 200
+[debug] [2024-11-07T13:47:39.268Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/pocket-class-booking-system/sites {"sites":[{"name":"projects/pocket-class-booking-system/sites/pocket-class-booking-system","defaultUrl":"https://pocket-class-booking-system.web.app","appId":"1:259986748132:web:328e28d1bf84b1eb4db2f1","type":"DEFAULT_SITE"},{"name":"projects/pocket-class-booking-system/sites/pocket-class-booking-system-7cdfc","defaultUrl":"https://pocket-class-booking-system-7cdfc.web.app","type":"USER_SITE"},{"name":"projects/pocket-class-booking-system/sites/pocket-class-booking-system-edfd8","defaultUrl":"https://pocket-class-booking-system-edfd8.web.app","type":"USER_SITE"}]}
+[debug] [2024-11-07T13:47:39.268Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:39.268Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:39.269Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system/webApps/1:259986748132:web:328e28d1bf84b1eb4db2f1/config [none]
+[debug] [2024-11-07T13:47:40.226Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system/webApps/1:259986748132:web:328e28d1bf84b1eb4db2f1/config 200
+[debug] [2024-11-07T13:47:40.226Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system/webApps/1:259986748132:web:328e28d1bf84b1eb4db2f1/config {"projectId":"pocket-class-booking-system","appId":"1:259986748132:web:328e28d1bf84b1eb4db2f1","storageBucket":"pocket-class-booking-system.firebasestorage.app","apiKey":"AIzaSyCD1Ze35LZQzdsMV-qyw-ksFCE5Eg2MC-Q","authDomain":"pocket-class-booking-system.firebaseapp.com","messagingSenderId":"259986748132","measurementId":"G-3SCFEQL70P"}
+[debug] [2024-11-07T13:47:40.245Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:40.245Z] Checked if tokens are valid: true, expires at: 1730989109362
+[debug] [2024-11-07T13:47:40.245Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system [none]
+[debug] [2024-11-07T13:47:40.841Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system 200
+[debug] [2024-11-07T13:47:40.841Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pocket-class-booking-system {"projectId":"pocket-class-booking-system","projectNumber":"259986748132","displayName":"Pocket-Class-Booking-System","name":"projects/pocket-class-booking-system","resources":{"hostingSite":"pocket-class-booking-system"},"state":"ACTIVE","etag":"1_3f82058b-8e72-4205-a2df-9d212b4d36c7"}
+[info] i  hosting[pocket-class-booking-system]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[pocket-class-booking-system]: Local server: http://localhost:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5002\u001b[22m\u001b[24m"}}
