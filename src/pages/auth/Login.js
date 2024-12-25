@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../../config/firebase';
-import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from '../../config/firebase';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import studyImage from '../../assets/study.png';
 import googleIcon from '../../assets/icons/google.svg';
 import './Auth.css';
@@ -77,18 +77,12 @@ function Login() {
     setIsSubmitting(true);
 
     try {
-      const provider = new GoogleAuthProvider();
-      provider.setCustomParameters({
-        prompt: 'select_account'
-      });
       console.log('Starting Google sign in...');
-      const result = await signInWithPopup(auth, provider);
-      console.log('Sign in successful:', result.user.email);
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log('Google sign in successful:', result.user.email);
       navigate('/');
     } catch (error) {
       console.error('Google sign-in error:', error);
-      console.error('Error code:', error.code);
-      console.error('Error message:', error.message);
       switch (error.code) {
         case 'auth/popup-closed-by-user':
           setError('Sign in cancelled. Please try again');
@@ -99,14 +93,12 @@ function Login() {
         case 'auth/cancelled-popup-request':
           setError('Another sign in attempt is in progress');
           break;
-        case 'auth/network-request-failed':
-          setError('Network error. Please check your internet connection');
-          break;
         case 'auth/unauthorized-domain':
-          setError('This domain is not authorized for Google Sign-In. Please contact support.');
+          setError('This domain is not authorized for Google Sign-in. Please contact support.');
           break;
         default:
-          setError(`An error occurred during Google sign in: ${error.message}`);
+          setError('An error occurred during Google sign-in. Please try again');
+          console.error('Detailed error:', error);
       }
     } finally {
       setIsSubmitting(false);
