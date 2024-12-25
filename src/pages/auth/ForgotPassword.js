@@ -8,13 +8,13 @@ import './Auth.css';
 function ForgotPassword() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const [success, setSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleResetPassword = async (e) => {
     e.preventDefault();
     setError('');
-    setSuccessMessage('');
+    setSuccess(false);
     setIsSubmitting(true);
 
     // Validate email
@@ -27,8 +27,8 @@ function ForgotPassword() {
 
     try {
       await sendPasswordResetEmail(auth, email);
-      setSuccessMessage('Password reset instructions have been sent to your email');
-      setEmail(''); // Clear the email field after successful submission
+      setSuccess(true);
+      setEmail(''); // Clear the email field
     } catch (error) {
       console.error('Password reset error:', error);
       switch (error.code) {
@@ -41,12 +41,8 @@ function ForgotPassword() {
         case 'auth/too-many-requests':
           setError('Too many attempts. Please try again later');
           break;
-        case 'auth/network-request-failed':
-          setError('Network error. Please check your internet connection');
-          break;
         default:
           setError('An error occurred. Please try again');
-          console.error('Detailed error:', error);
       }
     } finally {
       setIsSubmitting(false);
@@ -59,13 +55,17 @@ function ForgotPassword() {
         <div className="auth-content">
           <h2 className="auth-title">Reset Password</h2>
           <p className="auth-subtitle">
-            Enter your email address and we'll send you instructions to reset your password
+            Enter your email address and we'll send you a link to reset your password
           </p>
 
           {error && <div className="auth-error">{error}</div>}
-          {successMessage && <div className="auth-success">{successMessage}</div>}
+          {success && (
+            <div className="auth-success">
+              Password reset email sent! Check your inbox for further instructions.
+            </div>
+          )}
 
-          <form onSubmit={handleSubmit} className="auth-form">
+          <form onSubmit={handleResetPassword} className="auth-form">
             <div className="form-group">
               <label htmlFor="email">Email Address</label>
               <input
@@ -73,9 +73,8 @@ function ForgotPassword() {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                placeholder="you@example.com"
                 required
-                disabled={isSubmitting}
               />
             </div>
 
@@ -84,15 +83,13 @@ function ForgotPassword() {
               className="auth-button"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Sending...' : 'Send Reset Instructions'}
+              {isSubmitting ? 'Sending...' : 'Send Reset Link'}
             </button>
-
-            <div className="auth-links">
-              <Link to="/login" className="back-to-login">
-                ← Back to Login
-              </Link>
-            </div>
           </form>
+
+          <p className="auth-footer">
+            Remember your password? <Link to="/login">Log in</Link>
+          </p>
         </div>
         <div className="auth-image">
           <img src={studyImage} alt="Illustration" />

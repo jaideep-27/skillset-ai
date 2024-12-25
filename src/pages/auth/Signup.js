@@ -55,10 +55,20 @@ function Signup() {
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      
+      // Update profile with full name
       await updateProfile(userCredential.user, {
         displayName: fullName
       });
-      navigate('/dashboard');
+      
+      // Send email verification
+      await userCredential.user.sendEmailVerification();
+      
+      // Sign out the user until they verify their email
+      await auth.signOut();
+      
+      alert('A verification email has been sent. Please check your inbox and verify your email before logging in.');
+      navigate('/login');
     } catch (error) {
       console.error('Signup error:', error);
       switch (error.code) {
@@ -84,10 +94,17 @@ function Signup() {
   };
 
   const handleGoogleSignup = async () => {
+    setError('');
+
     try {
       const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
-      navigate('/dashboard');
+      provider.setCustomParameters({
+        prompt: 'select_account'
+      });
+      console.log('Starting Google sign in...');
+      const result = await signInWithPopup(auth, provider);
+      console.log('Sign in successful:', result.user.email);
+      navigate('/');
     } catch (error) {
       console.error('Google signup error:', error);
       switch (error.code) {

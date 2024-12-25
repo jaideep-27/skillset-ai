@@ -27,8 +27,22 @@ function Login() {
     }
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate('/dashboard');
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      
+      // Check if email is verified
+      if (!userCredential.user.emailVerified) {
+        setError('Please verify your email before logging in. Check your inbox for the verification link.');
+        // Option to resend verification email
+        const resend = window.confirm('Would you like us to resend the verification email?');
+        if (resend) {
+          await userCredential.user.sendEmailVerification();
+          alert('Verification email has been resent. Please check your inbox.');
+        }
+        await auth.signOut();
+        return;
+      }
+      
+      navigate('/');
     } catch (error) {
       console.error('Login error:', error);
       switch (error.code) {
@@ -64,10 +78,17 @@ function Login() {
 
     try {
       const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
-      navigate('/dashboard');
+      provider.setCustomParameters({
+        prompt: 'select_account'
+      });
+      console.log('Starting Google sign in...');
+      const result = await signInWithPopup(auth, provider);
+      console.log('Sign in successful:', result.user.email);
+      navigate('/');
     } catch (error) {
       console.error('Google sign-in error:', error);
+      console.error('Error code:', error.code);
+      console.error('Error message:', error.message);
       switch (error.code) {
         case 'auth/popup-closed-by-user':
           setError('Sign in cancelled. Please try again');
@@ -81,8 +102,11 @@ function Login() {
         case 'auth/network-request-failed':
           setError('Network error. Please check your internet connection');
           break;
+        case 'auth/unauthorized-domain':
+          setError('This domain is not authorized for Google Sign-In. Please contact support.');
+          break;
         default:
-          setError('An error occurred during Google sign in. Please try again');
+          setError(`An error occurred during Google sign in: ${error.message}`);
       }
     } finally {
       setIsSubmitting(false);
