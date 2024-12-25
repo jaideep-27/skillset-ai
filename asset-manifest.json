@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/skillset-ai/static/css/main.4db6ddf0.css",
-    "main.js": "/skillset-ai/static/js/main.1712e8f1.js",
+    "main.js": "/skillset-ai/static/js/main.50ab82dc.js",
     "static/media/study.png": "/skillset-ai/static/media/study.aa354dfe570ca82a59f9.png",
     "static/media/google.svg": "/skillset-ai/static/media/google.71eea6f36afe236791169dfff1c131ca.svg",
     "index.html": "/skillset-ai/index.html",
@@ -17,10 +17,10 @@
     "static/media/courses.svg": "/skillset-ai/static/media/courses.5a9e13e50579da7222d97e62cb7089a5.svg",
     "static/media/grid.svg": "/skillset-ai/static/media/grid.091e92064d70f058d0e4.svg",
     "main.4db6ddf0.css.map": "/skillset-ai/static/css/main.4db6ddf0.css.map",
-    "main.1712e8f1.js.map": "/skillset-ai/static/js/main.1712e8f1.js.map"
+    "main.50ab82dc.js.map": "/skillset-ai/static/js/main.50ab82dc.js.map"
   },
   "entrypoints": [
     "static/css/main.4db6ddf0.css",
-    "static/js/main.1712e8f1.js"
+    "static/js/main.50ab82dc.js"
   ]
 }
