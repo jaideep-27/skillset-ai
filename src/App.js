@@ -10,7 +10,6 @@ import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import Profile from './pages/profile/Profile';
-<<<<<<< HEAD
 import AITutors from './pages/ai-learning/AITutors';
 import Games from './pages/games/Games';
 
@@ -40,10 +39,6 @@ import GeometryQuest from './pages/games/math-games/GeometryQuest';
 import LogicGateSimulator from './pages/games/electronics-games/LogicGateSimulator';
 import CircuitBuilder from './pages/games/electronics-games/CircuitBuilder';
 
-=======
-import AILearning from './pages/ai-learning/AILearning';
-import Games from './pages/games/Games';
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 import Quizzes from './pages/quizzes/Quizzes';
 import Courses from './pages/courses/Courses';
 import CourseDetail from './pages/courses/CourseDetail';
@@ -54,7 +49,6 @@ import './App.css';
 function App() {
   const [user] = useAuthState(auth);
 
-<<<<<<< HEAD
   // Helper function to render protected routes
   const protectedRoute = (Component) => {
     return user ? <Component /> : <Login />;
@@ -65,18 +59,10 @@ function App() {
       <div className="app">
         <Navbar />
         <div className="app-content">
-=======
-  return (
-    <Router>
-      <div className="app">
-        <Navbar user={user} />
-        <div className="content">
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-<<<<<<< HEAD
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:id" element={<CourseDetail />} />
@@ -115,17 +101,6 @@ function App() {
             <Route path="/games/electronics/circuit-builder" element={protectedRoute(CircuitBuilder)} />
 
             <Route path="/quizzes" element={protectedRoute(Quizzes)} />
-=======
-            <Route path="/forgot" element={<ForgotPassword />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/:id" element={<CourseDetail />} />
-            <Route path="/community" element={<Community />} />
-            <Route path="/profile" element={user ? <Profile /> : <Login />} />
-            <Route path="/ai-learning" element={user ? <AILearning /> : <Login />} />
-            <Route path="/games" element={user ? <Games /> : <Login />} />
-            <Route path="/games/dsa-games/:gameName" element={user ? <Games /> : <Login />} />
-            <Route path="/quizzes" element={user ? <Quizzes /> : <Login />} />
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
             <Route path="/instructor" element={<InstructorDashboard />} />
           </Routes>
         </div>
