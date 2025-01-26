@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 /* Existing styles */
 
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 .profile {
   min-height: 100vh;
   background: var(--bg-darker);
@@ -95,6 +98,7 @@
     font-size: 1.25rem;
   }
 }
+<<<<<<< HEAD
 
 /* Mobile Responsiveness */
 @media (max-width: 1200px) {
@@ -331,3 +335,5 @@
     padding-right: max(1rem, env(safe-area-inset-right));
   }
 }
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f

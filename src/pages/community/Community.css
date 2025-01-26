@@ -2,6 +2,10 @@
   min-height: 100vh;
   background: var(--bg-darker);
   padding: 2rem;
+<<<<<<< HEAD
+=======
+  padding-top: 90px;
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .community-container {
@@ -13,7 +17,11 @@
   font-size: 2.5rem;
   color: var(--text-primary);
   margin-bottom: 2rem;
+<<<<<<< HEAD
   text-align: left;
+=======
+  text-align: center;
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .community-sections {
@@ -130,6 +138,7 @@
   font-size: 0.9rem;
 }
 
+<<<<<<< HEAD
 @media (max-width: 1200px) {
   .community-container {
     padding: 2rem 1.5rem;
@@ -142,6 +151,8 @@
   }
 }
 
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 @media (max-width: 768px) {
   .community {
     padding: 1rem;
@@ -160,6 +171,7 @@
   .events-section {
     padding: 1.5rem;
   }
+<<<<<<< HEAD
 
   .community-container {
     padding: 1.5rem 1rem;
@@ -353,4 +365,6 @@
     padding-left: max(1rem, env(safe-area-inset-left));
     padding-right: max(1rem, env(safe-area-inset-right));
   }
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }

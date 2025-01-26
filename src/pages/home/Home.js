@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 import { FiArrowUp } from 'react-icons/fi';
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 import './Home.css';
 
 // Import SVG icons
@@ -17,28 +24,44 @@ function Home() {
   const features = [
     {
       id: 'courses',
+<<<<<<< HEAD
       title: 'Interactive Courses ',
+=======
+      title: 'Interactive Courses 🎯',
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
       description: 'Engage with hands-on exercises and real-time feedback to enhance your learning experience',
       icon: coursesIcon,
       path: '/courses'
     },
     {
       id: 'games',
+<<<<<<< HEAD
       title: 'Educational Games ',
+=======
+      title: 'Educational Games 🎮',
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
       description: 'Master concepts through engaging games designed to make learning fun and effective',
       icon: gamesIcon,
       path: '/games'
     },
     {
       id: 'quizzes',
+<<<<<<< HEAD
       title: 'Skill Assessment ',
+=======
+      title: 'Skill Assessment 📚',
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
       description: 'Test your knowledge with our adaptive quizzes and get personalized learning recommendations',
       icon: quizzesIcon,
       path: '/quizzes'
     },
     {
       id: 'community',
+<<<<<<< HEAD
       title: 'Learning Community ',
+=======
+      title: 'Learning Community 👥',
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
       description: 'Connect with fellow learners, share knowledge, and participate in group discussions',
       icon: communityIcon,
       path: '/community'
@@ -61,6 +84,7 @@ function Home() {
     threshold: 0.1
   });
 
+<<<<<<< HEAD
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
@@ -79,6 +103,8 @@ function Home() {
     });
   };
 
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   const containerVariants = {
     hidden: {},
     visible: {
@@ -116,7 +142,11 @@ function Home() {
           }}
         >
           <h1>Master New Skills with Interactive Learning</h1>
+<<<<<<< HEAD
           <p>Embark on a journey of discovery and growth. Learn, practice, and excel in various skills through engaging challenges and real-world applications </p>
+=======
+          <p>Embark on a journey of discovery and growth. Learn, practice, and excel in various skills through engaging challenges and real-world applications 🚀</p>
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
           <div className="hero-buttons">
             <motion.button 
               className="primary-button"
@@ -190,6 +220,7 @@ function Home() {
           </motion.div>
         ))}
       </motion.section>
+<<<<<<< HEAD
       <button 
         className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
         onClick={scrollToTop}
@@ -197,6 +228,8 @@ function Home() {
       >
         <FiArrowUp size={28} color="white" />
       </button>
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
     </div>
   );
 }

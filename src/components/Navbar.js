@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import { FiMenu, FiX, FiUser, FiArrowUp } from 'react-icons/fi';
 import './Navbar.css';
 import logo from './icons/skillsetai_logo.png';
@@ -7,6 +8,13 @@ import logo from './icons/skillsetai_logo.png';
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+=======
+import { FiMenu, FiX, FiUser } from 'react-icons/fi';
+import './Navbar.css';
+
+function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -15,6 +23,7 @@ function Navbar() {
   };
 
   useEffect(() => {
+<<<<<<< HEAD
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300);
     };
@@ -24,6 +33,8 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
     setIsMobileMenuOpen(false);
   }, [location]);
 
@@ -31,6 +42,7 @@ function Navbar() {
     navigate('/profile');
   };
 
+<<<<<<< HEAD
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -100,6 +112,48 @@ function Navbar() {
         <FiArrowUp />
       </div>
     </>
+=======
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="nav-left">
+          <div className="logo">
+            <span className="logo-skillset">Skillset</span>
+            <span className="logo-ai">AI</span>
+          </div>
+        </Link>
+
+        <div className={`nav-right ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          <div className="nav-links">
+            <Link to="/courses" className={`nav-link ${isActive('/courses')}`}>
+              Courses
+            </Link>
+            <Link to="/games" className={`nav-link ${isActive('/games')}`}>
+              Games
+            </Link>
+            <Link to="/quizzes" className={`nav-link ${isActive('/quizzes')}`}>
+              Quizzes
+            </Link>
+            <Link to="/community" className={`nav-link ${isActive('/community')}`}>
+              Community
+            </Link>
+          </div>
+
+          <button className="profile-btn" onClick={handleProfileClick}>
+            <FiUser size={20} />
+            Profile
+          </button>
+        </div>
+
+        <button 
+          className="mobile-menu-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+        </button>
+      </div>
+    </nav>
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   );
 }
 

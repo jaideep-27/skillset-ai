@@ -15,6 +15,7 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 html, body {
   margin: 0;
   padding: 0;
@@ -23,6 +24,8 @@ html, body {
   overflow-y: auto;
 }
 
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -31,12 +34,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--text);
   background-color: var(--background);
+<<<<<<< HEAD
   position: relative;
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+<<<<<<< HEAD
 }
 
 /* Custom Scrollbar */
@@ -62,4 +69,6 @@ code {
 * {
   scrollbar-width: thin;
   scrollbar-color: #484b51 #0A1628;
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }

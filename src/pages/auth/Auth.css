@@ -263,6 +263,7 @@
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .auth-container {
@@ -439,5 +440,28 @@
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: max(1rem, env(safe-area-inset-left));
     padding-right: max(1rem, env(safe-area-inset-right));
+=======
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1.5rem;
+  }
+
+  .auth-card {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .auth-image {
+    display: none;
+  }
+
+  .auth-content {
+    max-width: 100%;
+  }
+
+  .auth-title {
+    font-size: 2.25rem;
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   }
 }

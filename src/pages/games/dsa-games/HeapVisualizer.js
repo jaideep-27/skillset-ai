@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './HeapVisualizer.css';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { IoArrowBack } from 'react-icons/io5';
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 
 const HeapVisualizer = () => {
   const [heap, setHeap] = useState([]);
@@ -230,13 +233,20 @@ const HeapVisualizer = () => {
         </div>
       )}
 
+<<<<<<< HEAD
       <div className="visualizer-layout">
         <div className="controls">
           <div className="control-group">
+=======
+      <div className="controls">
+        <div className="control-group">
+          <form onSubmit={handleInsert}>
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
             <input
               type="number"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
+<<<<<<< HEAD
               placeholder="Enter a number"
             />
             <button onClick={handleInsert}>Insert</button>
@@ -247,6 +257,30 @@ const HeapVisualizer = () => {
         <div className="heap-container">
           <canvas ref={canvasRef} className="heap-canvas" />
         </div>
+=======
+              placeholder="Enter value to insert"
+              disabled={animating}
+            />
+            <button type="submit" disabled={animating}>Insert</button>
+          </form>
+        </div>
+
+        <button
+          onClick={extractRoot}
+          disabled={animating || heap.length === 0}
+          className="extract-button"
+        >
+          Extract {isMaxHeap ? 'Max' : 'Min'}
+        </button>
+
+        <button
+          onClick={toggleHeapType}
+          disabled={animating}
+          className="toggle-button"
+        >
+          Switch to {isMaxHeap ? 'Min' : 'Max'} Heap
+        </button>
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
       </div>
 
       {message && (
@@ -254,6 +288,11 @@ const HeapVisualizer = () => {
           {message}
         </div>
       )}
+<<<<<<< HEAD
+=======
+
+      <canvas ref={canvasRef} className="heap-canvas" />
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
     </div>
   );
 };

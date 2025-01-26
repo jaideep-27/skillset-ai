@@ -144,6 +144,7 @@
   box-shadow: 0 4px 12px rgba(77, 97, 252, 0.25);
 }
 
+<<<<<<< HEAD
 .dashboard-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -252,6 +253,8 @@
   box-shadow: 0 4px 12px rgba(77, 97, 252, 0.25);
 }
 
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 /* Create Session Page */
 .create-session-page {
   min-height: 100vh;
@@ -400,6 +403,7 @@
     width: 100%;
   }
 }
+<<<<<<< HEAD
 
 /* Mobile Responsiveness */
 @media (max-width: 1200px) {
@@ -633,3 +637,5 @@
     padding-right: max(1rem, env(safe-area-inset-right));
   }
 }
+=======
+>>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f

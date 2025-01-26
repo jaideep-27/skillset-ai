@@ -1,0 +1,75 @@
+.ai-learning {
+  min-height: 100vh;
+  background: #f8f9ff;
+  padding: 2rem;
+}
+
+.ai-learning-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-learning h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.ai-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.ai-feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.ai-feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.ai-feature-card h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.ai-feature-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.feature-button {
+  background: #4C3AFF;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.feature-button:hover {
+  background: #3C2AFF;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .ai-learning {
+    padding: 1rem;
+  }
+
+  .ai-learning h1 {
+    font-size: 2rem;
+  }
+}
