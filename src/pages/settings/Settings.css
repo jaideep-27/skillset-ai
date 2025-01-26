@@ -1,0 +1,372 @@
+.settings {
+  min-height: 100vh;
+  background: #f8f9ff;
+  padding: 2rem;
+}
+
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.settings h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.settings-section {
+  margin-bottom: 3rem;
+}
+
+.settings-section h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.form-group input:disabled {
+  background: #f8f9ff;
+  cursor: not-allowed;
+}
+
+.preference-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.preference-item:last-child {
+  border-bottom: none;
+}
+
+.preference-info h3 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.preference-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e5e7eb;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4C3AFF;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.theme-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background: white;
+  cursor: pointer;
+}
+
+.save-button {
+  width: 100%;
+  padding: 0.875rem;
+  background: #4C3AFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-button:hover {
+  background: #3C2AFF;
+}
+
+@media (max-width: 768px) {
+  .settings {
+    padding: 1rem;
+  }
+
+  .settings-container {
+    padding: 1.5rem;
+  }
+
+  .settings h1 {
+    font-size: 1.75rem;
+  }
+
+  .settings-section h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .settings-container {
+    padding: 2rem 1.5rem;
+    padding-top: 80px;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1.5rem 1rem;
+    padding-top: 80px;
+  }
+
+  .settings-header {
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .settings-title {
+    font-size: 1.75rem;
+  }
+
+  .settings-description {
+    font-size: 0.95rem;
+  }
+
+  .settings-section {
+    padding: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .settings-form {
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    gap: 0.5rem;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+  }
+
+  .form-input {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    height: 44px;
+  }
+
+  .form-select {
+    height: 44px;
+  }
+
+  .form-textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    min-height: 100px;
+  }
+
+  .toggle-group {
+    gap: 0.75rem;
+  }
+
+  .toggle-label {
+    font-size: 0.95rem;
+  }
+
+  .toggle-switch {
+    width: 48px;
+    height: 24px;
+  }
+
+  .toggle-slider {
+    width: 20px;
+    height: 20px;
+  }
+
+  .color-picker {
+    width: 44px;
+    height: 44px;
+  }
+
+  .action-buttons {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .action-button {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    padding: 1rem 0.75rem;
+    padding-top: 70px;
+  }
+
+  .settings-title {
+    font-size: 1.5rem;
+  }
+
+  .settings-description {
+    font-size: 0.9rem;
+  }
+
+  .settings-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .settings-form {
+    gap: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+  }
+
+  .toggle-group {
+    gap: 0.625rem;
+  }
+
+  .toggle-label {
+    font-size: 0.9rem;
+  }
+
+  .toggle-switch {
+    width: 44px;
+    height: 22px;
+  }
+
+  .toggle-slider {
+    width: 18px;
+    height: 18px;
+  }
+
+  .action-buttons {
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    flex-direction: column;
+  }
+
+  .action-button {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .form-input,
+  .form-select,
+  .form-textarea,
+  .action-button {
+    min-height: 44px;
+  }
+
+  .toggle-switch {
+    cursor: pointer;
+  }
+
+  .color-picker {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Notched devices */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .settings-container {
+    padding-top: calc(80px + env(safe-area-inset-top));
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}

@@ -1,0 +1,45 @@
+.dsa-content-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  min-height: calc(100vh - 200px);
+}
+
+.games-grid {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  align-content: start;
+}
+
+.code-practice-section {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-practice-section h2 {
+  color: #fff;
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+}
+
+.code-practice-section p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 20px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1200px) {
+  .dsa-content-container {
+    flex-direction: column;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

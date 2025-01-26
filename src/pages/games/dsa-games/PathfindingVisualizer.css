@@ -1,0 +1,279 @@
+.pathfinding-visualizer {
+  min-height: 100vh;
+  background: var(--bg-darker);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.tools {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tool-button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tool-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.tool-button.active {
+  background: var(--primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.3);
+}
+
+select {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+select:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.start-button,
+.reset-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #00B4DB, #0083B0);
+  color: white;
+}
+
+.start-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
+}
+
+.reset-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reset-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.start-button:disabled,
+.reset-button:disabled,
+.tool-button:disabled,
+select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.grid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.row {
+  display: flex;
+  gap: 2px;
+}
+
+.node {
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.node.wall {
+  background: rgba(255, 255, 255, 0.2);
+  animation: wallAnimation 0.3s ease-out;
+}
+
+.node.start {
+  background: #4CAF50;
+  animation: nodeAnimation 0.3s ease-out;
+}
+
+.node.end {
+  background: #F44336;
+  animation: nodeAnimation 0.3s ease-out;
+}
+
+.node.visited {
+  background: rgba(33, 150, 243, 0.4);
+  animation: visitedAnimation 0.5s ease-out;
+}
+
+.node.path {
+  background: #FFC107;
+  animation: pathAnimation 0.5s ease-out;
+}
+
+.tutorial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.tutorial-card {
+  background: var(--bg-dark);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+.tutorial-card h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.tutorial-card p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.tutorial-card button {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00B4DB, #0083B0);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.tutorial-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
+}
+
+@keyframes wallAnimation {
+  0% { transform: scale(0.3); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes nodeAnimation {
+  0% { transform: scale(0.3); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+    background: rgba(33, 150, 243, 0.8);
+  }
+  50% {
+    transform: scale(1.2);
+    background: rgba(33, 150, 243, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    background: rgba(33, 150, 243, 0.4);
+  }
+}
+
+@keyframes pathAnimation {
+  0% {
+    transform: scale(0.3);
+    background: rgba(255, 193, 7, 0.8);
+  }
+  50% {
+    transform: scale(1.2);
+    background: rgba(255, 193, 7, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    background: #FFC107;
+  }
+}
+
+@media (max-width: 768px) {
+  .pathfinding-visualizer {
+    padding: 1rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  .tools {
+    flex-direction: column;
+  }
+
+  .tool-button,
+  select,
+  .start-button,
+  .reset-button {
+    width: 100%;
+  }
+
+  .node {
+    width: 20px;
+    height: 20px;
+  }
+}

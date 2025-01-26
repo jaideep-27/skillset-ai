@@ -1,0 +1,321 @@
+.geometry-quest {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.geometry-quest h2 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shape-controls {
+  background: var(--glass-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+}
+
+.shape-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.shape-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shape-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.shape-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.shape-canvas {
+  background: var(--bg-darker);
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+}
+
+.dimensions-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.dimension-input {
+  margin-bottom: 1rem;
+}
+
+.dimension-input label {
+  display: block;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.dimension-input input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-darker);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dimension-input input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(77, 97, 252, 0.2);
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.calculate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-primary);
+}
+
+.results {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-lighter);
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item span {
+  color: var(--text-secondary);
+}
+
+.result-item .value {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.error {
+  border-color: var(--accent-pink);
+}
+
+.error-message {
+  color: var(--accent-pink);
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .geometry-quest {
+    padding: 1rem;
+  }
+
+  .shape-buttons {
+    flex-direction: column;
+  }
+
+  .shape-btn {
+    width: 100%;
+  }
+
+  .shape-canvas {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .geometry-quest {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .controls-panel {
+    order: 2;
+  }
+
+  .geometry-canvas {
+    order: 1;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .geometry-quest {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+
+  .controls-panel {
+    padding: 1.25rem;
+  }
+
+  .control-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .shape-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .geometry-canvas {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .shape {
+    touch-action: none;
+  }
+
+  .shape-properties {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .toolbar-button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .formula-display {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .geometry-quest {
+    padding: 0.75rem;
+    padding-top: 70px;
+  }
+
+  .controls-panel {
+    padding: 1rem;
+  }
+
+  .geometry-canvas {
+    transform: scale(0.8);
+  }
+
+  .shape {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .shape-label {
+    font-size: 0.8rem;
+  }
+
+  .formula-display {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .geometry-quest {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .geometry-canvas {
+    min-height: 300px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .shape {
+    padding: 12px;
+  }
+
+  .vertex-handle {
+    width: 16px;
+    height: 16px;
+  }
+
+  .toolbar-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Notched devices */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .geometry-quest {
+    padding-top: calc(80px + env(safe-area-inset-top));
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}

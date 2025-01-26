@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSet AI</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg">
+  <meta name="theme-color" content="#8B5CF6">
+  
+  <!-- External Stylesheets -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  />
+  <!-- Markdown CSS -->
+  <link 
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/sindresorhus/github-markdown-css/github-markdown.css"
+  />
+  <!-- Highlight.js for code syntax highlighting -->
+  <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+  />
+  <style>
+    .chat-message {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #1a1b26;
+      color: #a9b1d6;
+    }
+    
+    .chat-message pre {
+      background: #24283b !important;
+      border-radius: 4px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .chat-message code {
+      font-family: 'Fira Code', monospace;
+      color: #7aa2f7;
+    }
+    
+    .chat-message h1, .chat-message h2, .chat-message h3 {
+      color: #7aa2f7;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .chat-message strong {
+      color: #bb9af7;
+    }
+    
+    .chat-message ul, .chat-message ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .chat-message img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    
+    .chat-message blockquote {
+      border-left: 4px solid #7aa2f7;
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: #9aa5ce;
+    }
+    
+    .chat-message table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    
+    .chat-message th, .chat-message td {
+      padding: 0.5rem;
+      border: 1px solid #414868;
+    }
+    
+    .chat-message th {
+      background: #24283b;
+    }
+    
+    .chat-message a {
+      color: #7aa2f7;
+      text-decoration: none;
+    }
+    
+    .chat-message a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <!-- Markdown Processing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  
+  <!-- Initialize markdown processing -->
+  <script>
+    marked.setOptions({
+      highlight: function(code, lang) {
+        return hljs.highlightAuto(code).value;
+      },
+      breaks: true,
+      gfm: true
+    });
+  </script>
+
+  <!-- Your existing scripts -->
+  <script>
+    window.embeddedChatbotConfig = {
+      chatbotId: "WrMRrixD6xXDTkF4oF0B5",
+      domain: "www.chatbase.co"
+    }
+  </script>
+  <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="WrMRrixD6xXDTkF4oF0B5"
+    domain="www.chatbase.co"
+    defer>
+  </script>
+</body>
+</html>

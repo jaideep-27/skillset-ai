@@ -1,0 +1,160 @@
+.graph-visualizer {
+  padding: 2rem;
+  padding-top: 80px;
+  background: var(--bg-darker);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.controls select {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls select:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.controls select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.controls button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.instructions {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.graph-canvas {
+  flex: 1;
+  width: 100%;
+  min-height: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .graph-visualizer {
+    padding: 1rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .graph-visualizer {
+    padding: 2rem 1.5rem;
+    padding-top: 80px;
+  }
+
+  .graph-canvas {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .graph-visualizer {
+    padding: 1.5rem 1rem;
+    padding-top: 80px;
+  }
+
+  .graph-canvas {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-visualizer {
+    padding: 1rem 0.75rem;
+    padding-top: 70px;
+  }
+
+  .graph-canvas {
+    min-height: 300px;
+  }
+}
+
+/* Landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .graph-visualizer {
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .graph-canvas {
+    min-height: 400px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .controls button {
+    min-height: 44px;
+  }
+
+  .graph-canvas {
+    touch-action: none;
+  }
+}
+
+/* Notched devices */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .graph-visualizer {
+    padding-top: calc(80px + env(safe-area-inset-top));
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}

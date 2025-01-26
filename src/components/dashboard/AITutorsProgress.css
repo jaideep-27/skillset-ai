@@ -1,0 +1,158 @@
+.ai-tutors-progress-card {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 24px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ai-tutors-progress-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #4D61FC 0%, #00D4FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tutor-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.level-display {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.level-display h3 {
+  font-size: 1.1rem;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+}
+
+.level-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00D4FF;
+  margin-bottom: 1rem;
+}
+
+.xp-progress {
+  text-align: center;
+}
+
+.xp-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #4D61FC 0%, #00D4FF 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.achievements-display {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.achievements-display h3 {
+  font-size: 1.1rem;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+}
+
+.achievements-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.achievement-icon {
+  font-size: 1.2rem;
+}
+
+.current-path {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.current-path h3 {
+  font-size: 1.1rem;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+}
+
+.path-progress {
+  width: 100%;
+}
+
+.path-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.path-name {
+  color: #fff;
+  font-weight: 500;
+}
+
+.path-percentage {
+  color: #00D4FF;
+}
+
+.path-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.path-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #4D61FC 0%, #00D4FF 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.no-progress {
+  color: #94A3B8;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .tutor-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .level-number {
+    font-size: 2.5rem;
+  }
+}
