@@ -4,7 +4,7 @@ import './AITutors.css';
 import AITutorChat from '../../components/AITutorChat';
 import ErrorMessage from '../../components/common/ErrorMessage';
 
-const BACKEND_URL = 'https://skillset-ai-backend.onrender.com || http://localhost:3001';
+const BACKEND_URL = 'https://skillset-ai-backend.onrender.com';
 
 const tutorStyles = {
   visual: {

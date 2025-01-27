@@ -30,7 +30,7 @@ const AITutorChat = ({ tutorType }) => {
     }]);
 
     try {
-      const response = await fetch('https://skillset-ai-backend.onrender.com/api/tutor/chat' || 'http://localhost:3001/api/tutor/chat', {
+      const response = await fetch('https://skillset-ai-backend.onrender.com/api/tutor/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
