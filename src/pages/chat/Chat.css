@@ -232,7 +232,6 @@
   }
 }
 
-<<<<<<< HEAD
 @media (max-width: 1200px) {
   .chat-container {
     padding: 2rem 1.5rem;
@@ -467,8 +466,6 @@
   }
 }
 
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 @keyframes messageAppear {
   from {
     opacity: 0;

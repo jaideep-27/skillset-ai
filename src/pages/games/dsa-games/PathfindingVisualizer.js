@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { IoArrowBack } from 'react-icons/io5';
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 import './PathfindingVisualizer.css';
 
 const PathfindingVisualizer = () => {
@@ -212,15 +209,11 @@ const PathfindingVisualizer = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="game-container">
       <Link to="/games/categories/dsa" className="back-button">
         <IoArrowBack /> Back to Games
       </Link>
 
-=======
-    <div className="pathfinding-visualizer">
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
       {tutorial && (
         <div className="tutorial-overlay">
           <div className="tutorial-card">
@@ -233,7 +226,6 @@ const PathfindingVisualizer = () => {
         </div>
       )}
 
-<<<<<<< HEAD
       <div className="visualizer-layout">
         <div className="visualizer-content">
           <div className="control-panel">
@@ -337,83 +329,6 @@ const PathfindingVisualizer = () => {
             </div>
           </div>
         </div>
-=======
-      <div className="controls">
-        <div className="tools">
-          <button
-            className={`tool-button ${currentTool === 'wall' ? 'active' : ''}`}
-            onClick={() => setCurrentTool('wall')}
-            disabled={isRunning}
-          >
-            Draw Wall
-          </button>
-          <button
-            className={`tool-button ${currentTool === 'start' ? 'active' : ''}`}
-            onClick={() => setCurrentTool('start')}
-            disabled={isRunning}
-          >
-            Place Start
-          </button>
-          <button
-            className={`tool-button ${currentTool === 'end' ? 'active' : ''}`}
-            onClick={() => setCurrentTool('end')}
-            disabled={isRunning}
-          >
-            Place End
-          </button>
-        </div>
-
-        <select
-          value={algorithm}
-          onChange={(e) => setAlgorithm(e.target.value)}
-          disabled={isRunning}
-        >
-          <option value="dijkstra">Dijkstra's Algorithm</option>
-          <option value="astar">A* Search</option>
-          <option value="bfs">Breadth-First Search</option>
-        </select>
-
-        <button
-          className="start-button"
-          onClick={() => dijkstra()}
-          disabled={isRunning || !startNode || !endNode}
-        >
-          {isRunning ? 'Running...' : 'Start'}
-        </button>
-
-        <button
-          className="reset-button"
-          onClick={initializeGrid}
-          disabled={isRunning}
-        >
-          Reset Grid
-        </button>
-      </div>
-
-      <div 
-        className="grid"
-        onMouseLeave={() => setIsDrawing(false)}
-      >
-        {grid.map((row, rowIdx) => (
-          <div key={rowIdx} className="row">
-            {row.map((node, nodeIdx) => (
-              <div
-                key={nodeIdx}
-                className={`node ${
-                  node.isStart ? 'start' :
-                  node.isEnd ? 'end' :
-                  node.isWall ? 'wall' :
-                  node.isPath ? 'path' :
-                  node.isVisited ? 'visited' : ''
-                }`}
-                onMouseDown={() => handleMouseDown(rowIdx, nodeIdx)}
-                onMouseEnter={() => handleMouseEnter(rowIdx, nodeIdx)}
-                onMouseUp={handleMouseUp}
-              />
-            ))}
-          </div>
-        ))}
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
       </div>
     </div>
   );

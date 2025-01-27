@@ -1,9 +1,6 @@
 .heap-visualizer {
   padding: 2rem;
-<<<<<<< HEAD
   padding-top: 80px;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   min-height: 100vh;
   background: var(--bg-darker);
   display: flex;
@@ -216,7 +213,6 @@
     width: 100%;
   }
 }
-<<<<<<< HEAD
 
 /* Mobile Responsiveness */
 @media (max-width: 1200px) {
@@ -455,5 +451,3 @@
     padding-right: max(1rem, env(safe-area-inset-right));
   }
 }
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f

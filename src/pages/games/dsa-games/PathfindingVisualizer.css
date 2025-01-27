@@ -1,18 +1,10 @@
 .pathfinding-visualizer {
-<<<<<<< HEAD
-=======
-  padding: 2rem;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   min-height: 100vh;
   background: var(--bg-darker);
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   gap: 1.5rem;
   padding: 2rem;
-=======
-  gap: 2rem;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .controls {
@@ -23,19 +15,13 @@
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
   flex-wrap: wrap;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .tools {
   display: flex;
   gap: 1rem;
-<<<<<<< HEAD
   flex-wrap: wrap;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .tool-button {
@@ -51,26 +37,17 @@
 
 .tool-button:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
   transform: translateY(-2px);
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .tool-button.active {
   background: var(--primary);
   color: white;
   border-color: transparent;
-<<<<<<< HEAD
   box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.3);
 }
 
 select {
-=======
-}
-
-.controls select {
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   padding: 0.75rem 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -79,16 +56,10 @@ select {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
-<<<<<<< HEAD
   min-width: 200px;
 }
 
 select:hover:not(:disabled) {
-=======
-}
-
-.controls select:hover:not(:disabled) {
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -100,10 +71,7 @@ select:hover:not(:disabled) {
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
-<<<<<<< HEAD
   min-width: 120px;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .start-button {
@@ -124,16 +92,12 @@ select:hover:not(:disabled) {
 
 .reset-button:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
   transform: translateY(-2px);
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .start-button:disabled,
 .reset-button:disabled,
 .tool-button:disabled,
-<<<<<<< HEAD
 select:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -146,37 +110,18 @@ select:disabled {
   flex-direction: column;
   gap: 2px;
   padding: 2rem;
-=======
-.controls select:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  padding: 1rem;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: auto;
-<<<<<<< HEAD
   align-items: center;
   justify-content: center;
   min-height: 600px;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .row {
   display: flex;
-<<<<<<< HEAD
   gap: 2px;
-=======
-  gap: 1px;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .node {
@@ -184,10 +129,7 @@ select:disabled {
   height: 25px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-<<<<<<< HEAD
   border-radius: 4px;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .node.wall {
@@ -215,64 +157,6 @@ select:disabled {
   animation: pathAnimation 0.5s ease-out;
 }
 
-<<<<<<< HEAD
-=======
-@keyframes wallAnimation {
-  0% {
-    transform: scale(0.3);
-    background: rgba(255, 255, 255, 0.4);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-    background: rgba(255, 255, 255, 0.2);
-  }
-}
-
-@keyframes nodeAnimation {
-  0% {
-    transform: scale(0.3);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes visitedAnimation {
-  0% {
-    transform: scale(0.3);
-    background: rgba(0, 180, 219, 0.75);
-  }
-  50% {
-    transform: scale(1.2);
-    background: rgba(0, 180, 219, 0.4);
-  }
-  100% {
-    transform: scale(1);
-    background: rgba(33, 150, 243, 0.4);
-  }
-}
-
-@keyframes pathAnimation {
-  0% {
-    transform: scale(0.3);
-    background: rgba(255, 193, 7, 0.75);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-    background: #FFC107;
-  }
-}
-
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 .tutorial-overlay {
   position: fixed;
   top: 0;
@@ -284,10 +168,6 @@ select:disabled {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-<<<<<<< HEAD
-=======
-  animation: fadeIn 0.3s ease-out;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .tutorial-card {
@@ -297,22 +177,12 @@ select:disabled {
   border: 1px solid rgba(255, 255, 255, 0.1);
   max-width: 500px;
   text-align: center;
-<<<<<<< HEAD
-=======
-  animation: slideUp 0.3s ease-out;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .tutorial-card h3 {
   font-size: 1.5rem;
   color: var(--text-primary);
   margin-bottom: 1rem;
-<<<<<<< HEAD
-=======
-  background: linear-gradient(135deg, #00B4DB, #0083B0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .tutorial-card p {
@@ -330,10 +200,7 @@ select:disabled {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-<<<<<<< HEAD
   width: 100%;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .tutorial-card button:hover {
@@ -341,7 +208,6 @@ select:disabled {
   box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
 }
 
-<<<<<<< HEAD
 @keyframes wallAnimation {
   0% { transform: scale(0.3); }
   50% { transform: scale(1.2); }
@@ -381,25 +247,6 @@ select:disabled {
   100% {
     transform: scale(1);
     background: #FFC107;
-=======
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   }
 }
 
@@ -410,27 +257,16 @@ select:disabled {
 
   .controls {
     flex-direction: column;
-<<<<<<< HEAD
     align-items: stretch;
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
     padding: 1rem;
   }
 
   .tools {
     flex-direction: column;
-<<<<<<< HEAD
   }
 
   .tool-button,
   select,
-=======
-    width: 100%;
-  }
-
-  .tool-button,
-  .controls select,
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   .start-button,
   .reset-button {
     width: 100%;

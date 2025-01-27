@@ -1,9 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-<<<<<<< HEAD
 import AITutorsProgress from '../../components/dashboard/AITutorsProgress';
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 import './Dashboard.css';
 
 const data = [
@@ -45,11 +42,8 @@ function Dashboard() {
       </div>
 
       <div className="dashboard-grid">
-<<<<<<< HEAD
         <AITutorsProgress />
         
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
         <div className="progress-card">
           <h2>Learning Progress</h2>
           <ResponsiveContainer width="100%" height={400}>

@@ -3,11 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   background: linear-gradient(135deg, #040911 0%, #071018 100%);
-=======
-  background: linear-gradient(135deg, #0a0f1f 0%, #1a1f3f 100%);
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   overflow: hidden;
   position: relative;
 }
@@ -141,21 +137,12 @@
 }
 
 .hero h1 {
-<<<<<<< HEAD
   font-size: 5.4rem;
   font-weight: 450;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   text-align: center;
   background: linear-gradient(135deg, #ffffff 0%, #8089de 50%, #4dc4d6 100%);
-=======
-  font-size: 5.5rem;
-  font-weight: 500;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  background: linear-gradient(135deg, #ffffff 0%, #818CF8 50%, #22D3EE 100%);
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -469,7 +456,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-<<<<<<< HEAD
 /* Back to top button */
 .back-to-top {
   position: fixed;
@@ -873,8 +859,6 @@
   }
 }
 
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;

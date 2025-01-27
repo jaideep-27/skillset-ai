@@ -1,17 +1,11 @@
 .dashboard {
-<<<<<<< HEAD
   padding: 2rem 1.5rem;
   max-width: 1200px;
-=======
-  padding: 2rem;
-  max-width: 1400px;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   margin: 0 auto;
 }
 
 .dashboard-header {
   margin-bottom: 2rem;
-<<<<<<< HEAD
   text-align: center;
 }
 
@@ -19,43 +13,23 @@
   font-size: 2rem;
   font-weight: 600;
   color: #E2E8F0;
-=======
-}
-
-.dashboard-header h1 {
-  font-size: 2.5rem;
-  background: linear-gradient(90deg, #00E0FF, #4C6FFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   margin-bottom: 0.5rem;
 }
 
 .dashboard-header p {
-<<<<<<< HEAD
   color: #94A3B8;
-=======
-  color: var(--text-secondary);
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   font-size: 1.1rem;
 }
 
 .dashboard-grid {
   display: grid;
-<<<<<<< HEAD
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-=======
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  align-items: start;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .progress-card {
   background: rgba(15, 23, 42, 0.6);
   border-radius: 16px;
-<<<<<<< HEAD
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   grid-column: span 2;
@@ -72,27 +46,10 @@
   grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-=======
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.progress-card h2 {
-  color: var(--text-primary);
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
-}
-
-.course-cards {
-  display: flex;
-  flex-direction: column;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   gap: 1rem;
 }
 
 .course-card {
-<<<<<<< HEAD
   background: rgba(15, 23, 42, 0.6);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -105,36 +62,12 @@
 .course-icon {
   font-size: 1.5rem;
   background: rgba(77, 97, 252, 0.2);
-=======
-  background: rgba(107, 114, 128, 0.3);
-  border-radius: 12px;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.course-card:hover {
-  transform: translateY(-2px);
-  background: rgba(107, 114, 128, 0.4);
-}
-
-.course-icon {
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   width: 48px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-<<<<<<< HEAD
-=======
-  background: rgba(99, 102, 241, 0.1);
-  font-size: 1.5rem;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 .course-content {
@@ -142,27 +75,15 @@
 }
 
 .course-content h3 {
-<<<<<<< HEAD
   font-size: 1.1rem;
   font-weight: 500;
   color: #E2E8F0;
-=======
-  color: var(--text-primary);
-  font-size: 1.1rem;
-  font-weight: 500;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   margin-bottom: 0.5rem;
 }
 
 .course-content p {
-<<<<<<< HEAD
   font-size: 0.9rem;
   color: #94A3B8;
-=======
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin: 0;
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
 
 /* Chart customization */
@@ -195,7 +116,6 @@
   padding: 0.75rem !important;
 }
 
-<<<<<<< HEAD
 /* Chart Styles */
 .recharts-cartesian-grid-horizontal line,
 .recharts-cartesian-grid-vertical line {
@@ -321,8 +241,6 @@
   }
 }
 
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 @media (max-width: 1024px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
@@ -334,7 +252,6 @@
     padding: 1rem;
   }
 
-<<<<<<< HEAD
   .dashboard-grid {
     gap: 1rem;
   }
@@ -343,8 +260,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
   .dashboard-header h1 {
     font-size: 2rem;
   }
@@ -353,7 +268,6 @@
     padding: 1.5rem;
   }
 }
-<<<<<<< HEAD
 
 @media (max-width: 480px) {
   .dashboard-header h1 {
@@ -583,5 +497,3 @@
     padding-right: max(1rem, env(safe-area-inset-right));
   }
 }
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f

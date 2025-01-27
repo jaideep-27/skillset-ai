@@ -205,7 +205,6 @@
   line-height: 1.6;
 }
 
-<<<<<<< HEAD
 @media (max-width: 1024px) {
   .quiz-container {
     max-width: 800px;
@@ -218,8 +217,6 @@
   }
 }
 
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 @media (max-width: 768px) {
   .dsa-quiz {
     padding: 1rem;
@@ -244,7 +241,6 @@
   .score {
     font-size: 3rem;
   }
-<<<<<<< HEAD
 
   .quiz-container {
     padding: 1rem;
@@ -387,6 +383,4 @@
     padding-left: max(1rem, env(safe-area-inset-left));
     padding-right: max(1rem, env(safe-area-inset-right));
   }
-=======
->>>>>>> b070a1a0eaea0899fa172ab27c6f5a1d84d0419f
 }
